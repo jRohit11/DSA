@@ -12,7 +12,7 @@ class Solution {
             return;
         }
         for(int i=start;i<=9;i++){
-            if (sum + i > n) break; // pruning
+            //if (sum + i > n) break; // pruning
             current.add(i);
             helper(k,n,i+1,sum+i,current,ans);
             current.remove(current.size()-1);
