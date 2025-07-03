@@ -9,8 +9,7 @@ class Solution {
             }
             if(zerosCount<=k){
                 maxLen=Math.max(maxLen,r-l+1);
-            }
-            while(zerosCount>k){
+            }else{
                 if(nums[l]==0){
                     zerosCount--;
                 }
