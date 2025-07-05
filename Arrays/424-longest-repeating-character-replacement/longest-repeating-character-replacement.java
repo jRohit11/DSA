@@ -1,10 +1,10 @@
 class Solution {
     public int characterReplacement(String s, int k) {
         int l=0,r=0;
-        int maxL=0;
-        int[] hash=new int[26];
         int maxF=0;
+        int maxL=0;
         int changes=0;
+        int[] hash=new int[26];
         while(r<s.length()){
             hash[s.charAt(r)-'A']++;
             maxF=Math.max(maxF,hash[s.charAt(r)-'A']);
