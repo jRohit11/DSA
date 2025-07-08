@@ -1,11 +1,11 @@
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
-        return atmost(nums,k)-atmost(nums,k-1);
+        return helper(nums,k)-helper(nums,k-1);
     }
-    public int atmost(int[] nums,int k){
-        int count=0;
+    public int helper(int[] nums,int k){
         int l=0,r=0;
         int oddCount=0;
+        int count=0;
         while(r<nums.length){
             if(nums[r]%2!=0){
                 oddCount++;
