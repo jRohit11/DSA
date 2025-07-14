@@ -5,7 +5,7 @@ class Solution {
             map.put(nums[i],map.getOrDefault(nums[i],0)+1);
         }
         List<Integer> ans=new ArrayList<>();
-        for(Map.Entry<Integer,Integer> entry:map.entrySet()){
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
             if(entry.getValue()>nums.length/3){
                 ans.add(entry.getKey());
             }
