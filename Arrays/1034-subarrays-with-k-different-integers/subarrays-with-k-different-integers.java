@@ -3,9 +3,9 @@ class Solution {
         return atmost(nums,k)-atmost(nums,k-1);
     }
     public int atmost(int[] nums,int k){
-        HashMap<Integer,Integer> map=new HashMap<>();
         int l=0,r=0;
         int count=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
         while(r<nums.length){
             map.put(nums[r],map.getOrDefault(nums[r],0)+1);
             while(map.size()>k){
