@@ -7,12 +7,16 @@ class Solution {
             char cs=s.charAt(i);
             char ct=t.charAt(i);
             if(mapS.containsKey(cs)){
-                if(mapS.get(cs)!=ct) return false;
+                if(mapS.get(cs)!=ct){
+                    return false;
+                }
             }else{
                 mapS.put(cs,ct);
             }
             if(mapT.containsKey(ct)){
-                if(mapT.get(ct)!=cs) return false;
+                if(mapT.get(ct)!=cs){
+                    return false;
+                } 
             }else{
                 mapT.put(ct,cs);
             }
