@@ -7,13 +7,15 @@ class Solution {
             if(nums[r]==0){
                 zerosCount++;
             }
-            while(zerosCount>k){
+            if(zerosCount<=k){
+                maxLen=Math.max(maxLen,r-l+1);
+            }
+            else{
                 if(nums[l]==0){
                     zerosCount--;
                 }
                 l++;
             }
-            maxLen=Math.max(maxLen,r-l+1);
             r++;
         }
         return maxLen;
