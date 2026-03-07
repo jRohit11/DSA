@@ -10,13 +10,12 @@ class Solution {
             if(zerosCount<=k){
                 maxLen=Math.max(maxLen,r-l+1);
             }
-            while(zerosCount>k){
-                if(nums[l]==0){
+            if(zerosCount>k){
+                if(nums[l]==0)
                     zerosCount--;
-                }
                 l++;
-                
             }
+
             r++;
         }
         return maxLen;
