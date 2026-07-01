@@ -14,7 +14,7 @@ class Solution {
 
             while(flip>k){
                 map.put(s.charAt(l),map.get(s.charAt(l))-1);
-                maxFreq=Math.max(maxFreq,map.get(s.charAt(l)));
+                //maxFreq=Math.max(maxFreq,map.get(s.charAt(l)));
                 l++;
                 flip=(r-l+1)-maxFreq;
                
