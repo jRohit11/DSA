@@ -5,12 +5,12 @@ class Solution {
         HashMap<Character,Integer> map=new HashMap<>();
         while(r<s.length()){
             if(map.containsKey(s.charAt(r))){
-                l=Math.max(l,map.getOrDefault(s.charAt(r),0)+1);
+                l=Math.max(l,map.get(s.charAt(r))+1);
             }
-
             map.put(s.charAt(r),r);
             maxLen=Math.max(maxLen,r-l+1);
             r++;
+
         }
         return maxLen;
     }
