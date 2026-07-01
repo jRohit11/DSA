@@ -3,9 +3,7 @@ class Solution {
         int l=0,r=0;
         int maxLen=0;
         HashMap<Integer,Integer> map=new HashMap<>();
-        if(fruits.length==1 || fruits.length==0){
-            return fruits.length;
-        }
+        
         while(r<fruits.length){
             map.put(fruits[r],map.getOrDefault(fruits[r],0)+1);
             if(map.size()<=2){
