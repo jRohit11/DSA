@@ -4,14 +4,14 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             totalSum+=nums[i];
         }
-        int sum=0;
+        int lSum=0;
         for(int i=0;i<nums.length;i++){
 
-            int rSum=totalSum-sum-nums[i];
-            if(sum==rSum){
+            int rSum=totalSum-lSum-nums[i];
+            if(lSum==rSum){
                 return i;
             }
-            sum+=nums[i];
+            lSum+=nums[i];
         }
         return -1;
     }
