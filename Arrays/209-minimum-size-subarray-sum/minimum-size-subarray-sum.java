@@ -12,6 +12,6 @@ class Solution {
             }
             r++;
         }
-        return minLen==Integer.MAX_VALUE?0:minLen;
+        return  minLen==Integer.MAX_VALUE?0:minLen;
     }
 }
