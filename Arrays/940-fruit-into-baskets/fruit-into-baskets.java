@@ -1,10 +1,13 @@
 class Solution {
     public int totalFruit(int[] fruits) {
-        HashMap<Integer,Integer> map=new HashMap<>();
         int l=0,r=0;
-        int maxLen=0;
+        int maxFruits=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
         while(r<fruits.length){
             map.put(fruits[r],map.getOrDefault(fruits[r],0)+1);
+            if(map.size()<=2){
+                maxFruits=Math.max(maxFruits,r-l+1);
+            }
             while(map.size()>2){
                 map.put(fruits[l],map.get(fruits[l])-1);
                 if(map.get(fruits[l])==0){
@@ -12,10 +15,8 @@ class Solution {
                 }
                 l++;
             }
-            maxLen=Math.max(maxLen,r-l+1);
-        
             r++;
         }
-        return maxLen;
+        return maxFruits;
     }
 }
